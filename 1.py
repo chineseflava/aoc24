@@ -50,5 +50,5 @@ def part2():
 
 if __name__ == "__main__":
     print(f"Answer part 1: {part1()}")
-    print(f"Answer part 1: {part2()}")
+    print(f"Answer part 2: {part2()}")
     
