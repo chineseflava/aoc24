@@ -6,8 +6,10 @@ def find_patterns(pattern):
     """
     Function to find matches using re.
 
-    Arguments: pattern to look for
-    Return: list of matches.
+    Args: 
+        pattern: to look for
+    Returns (List):
+        list of matches.
     """
 
 
