@@ -58,7 +58,7 @@ def part1():
     
     return score
 
-def x_mas(mat):
+def if_x_mas(mat):
     """Check if 3x3-box contains an 'X-MAS'. """
     diag = "".join(np.diagonal(mat))
     anti_diag = "".join(np.diagonal(np.fliplr(mat)))
@@ -81,7 +81,7 @@ def part2():
     for i in range(n-2):
         for j in range(n-2):
             sub_matrix = matrix[i:i+3,j:j+3]
-            if x_mas(sub_matrix):
+            if if_x_mas(sub_matrix):
                 score += 1
 
     return score
