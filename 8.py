@@ -40,13 +40,15 @@ def part1():
     return score
 
 def part2():
-    antennas, n = extract_data("8_example")
+    antennas, n = extract_data("8")
     anodes = set()
     for freq in antennas:
         combinations = list(itertools.combinations(antennas[freq], 2))
         for combo in combinations:
             a1 = combo[0]
             a2 = combo[1]
+            anodes.add(a1)
+            anodes.add(a2)
             dy = a1[0]-a2[0]
             dx = a1[1]-a2[1]
             anode1 = (a1[0]+dy, a1[1]+dx)
