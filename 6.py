@@ -1,4 +1,5 @@
 import time
+import time
 
 class Guard:
     def __init__(self, pos, direction):
@@ -15,16 +16,7 @@ class Guard:
         elif self.direction == "v":
             self.direction = "<"
         elif self.direction == "<":
-            self.direction = "^"  
-    def rotate_left(self):
-        if self.direction == "^":
-            self.direction = "<"
-        elif self.direction == ">":
-            self.direction = "^"
-        elif self.direction == "v":
-            self.direction = ">"
-        elif self.direction == "<":
-            self.direction = "v"  
+            self.direction = "^"   
 
     def set_pos(self, new_pos):
         self.pos = new_pos
@@ -56,7 +48,7 @@ class GuardMap:
         #If obstacles or outside matrix, rotate
         if next_pos in self.obstacles:
             self.guard.rotate_right()
-                # If next_pos is outside of matrix, guard is out.
+        # If next_pos is outside of matrix, guard is out.
         elif next_pos[0]>=n or next_pos[1]>=n or next_pos[0]*next_pos[1]<0:
             self.guard.outside = True
         #if not, move guard to this position
@@ -90,7 +82,6 @@ def part1():
     data = []
     for line in lines:
         data.append(line.strip("\n"))
-    #print(data)
 
     matrix, obstacles, guard = handle_data(data)
     guard_map = GuardMap(matrix, obstacles, guard)
@@ -98,7 +89,6 @@ def part1():
 
     while not guard_map.guard.outside:
         guard_map.step_forward()
-        #print(guard_map.guard.pos)
     
     score = guard_map.get_score()
 
@@ -148,7 +138,7 @@ def part2():
     return score
 
 if __name__ == "__main__":
-    #print(f"Answer part 1: {part1()}")
+    print(f"Answer part 1: {part1()}")
     start = time.time()
     print(f"Answer part 2: {part2()}")
     end = time.time()
