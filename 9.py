@@ -79,8 +79,6 @@ def sort_data2(disk_map, disk_log, space_log):
                 #print(disk_map)
     return disk_map
 
-
-
 def get_score(data):
     score = 0
     for idx, num in enumerate(data):
@@ -107,5 +105,5 @@ def part2():
 
 
 if __name__ == "__main__":
-    #print(f"Answer part 1: {part1()}")
+    print(f"Answer part 1: {part1()}")
     print(f"Answer part 2: {part2()}")

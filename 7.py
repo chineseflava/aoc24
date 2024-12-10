@@ -1,5 +1,4 @@
 import itertools
-from sympy import sympify, evalf
 
 """Day 7"""
 def compare_combinations(item, part=1):
@@ -58,6 +57,6 @@ def part2():
     return score
 
 if __name__ == "__main__":
-    #print(f"Answer part 1: {part1()}")
+    print(f"Answer part 1: {part1()}")
     print(f"Answer part 2: {part2()}")
 
