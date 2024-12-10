@@ -68,7 +68,6 @@ class Trailhead:
        return len(self.trails)
 
 def find_trails(trail_map, part=1):
-    """"""
     trails = []
     for y, line in enumerate(trail_map):
         for x, num in enumerate(line):
